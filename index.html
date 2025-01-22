@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            display: none;
+            padding: 2rem;
+            background: #fff;
+            margin: 2rem auto;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section:target {
+            display: block;
+        }
+        #home {
+            display: block;
+            padding: 2rem;
+            background: #d4edda;
+            margin: 2rem auto;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        #home:target {
+            background-color: #ffeaa7; 
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="resume.pdf" download>Download Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Hi, I'm Lasha</h2>
+        <p>Welcome to my personal portfolio website.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            <?php 
+            $about = "Hello, I'm Lasha from Georgia. I've been a student at SkillWill for 7 months now. My profession is building websites."; 
+            echo $about;
+            ?>
+             <a href='mailto:$about me'></a>"Hello, I'm Lasha from Georgia. I've been a student at SkillWill for 7 months now. My profession is building websites."; 
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>No projects to display at the moment.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            <?php
+            $phone = "+995597946453";
+            $email = "lasha10062009@gmail.com";
+            echo "My number:+995597946453"
+            <br>Email address: <a href='mailto:$email'>lasha10062009@gmail.com</a>
+            <br> my number: <a href='tel:$number'>+995597946453</a> 
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; <?php echo date('Y'); ?> ყველაფერი დაცულია 2025
+    </footer>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navItems = document.querySelectorAll('nav ul li a');
+
+        navItems.forEach(item => {
+            
+            const originalText = item.textContent;
+
+            item.addEventListener('mouseover', () => {
+                item.textContent = `→ ${originalText} ←`;
+            });
+
+            item.addEventListener('mouseout', () => {
+                item.textContent = originalText;
+            });
+        });
+    });
+</script>
