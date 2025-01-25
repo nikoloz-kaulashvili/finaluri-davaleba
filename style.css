@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url('files/backgorund.webp'); /* გზა ფაილამდე */
+    background-size: cover; /* გამოსახულების სრული ეკრანზე გაშლა */
+    background-position: center center; /* გამოსახულების ცენტრში გაშლა */
+    background-repeat: no-repeat; /* გამოსახულების გამეორება არ ხდება */
+    height: 100%; /* მთელი ეკრანის სიმაღლე */
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+section {
+    display: none;
+    padding: 2rem;
+    background: #fff;
+    margin: 2rem auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+section:target {
+    display: block;
+}
+#home {
+    display: block;
+    padding: 2rem;
+    background: #d4edda;
+    margin: 2rem auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+#home:target {
+    background-color: #ffeaa7; 
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+    margin-bottom: -30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project-box {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.project-box:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.project-box:active {
+    transform: translateY(2px); 
+}
+
+@media (max-width: 600px) {
+    .container {
+        justify-content: flex-start;
+    }
+
+    .project-box {
+        width: 100%; 
+    }
+}
+

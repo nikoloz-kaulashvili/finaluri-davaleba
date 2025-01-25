@@ -4,68 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        section {
-            display: none;
-            padding: 2rem;
-            background: #fff;
-            margin: 2rem auto;
-            width: 80%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        section:target {
-            display: block;
-        }
-        #home {
-            display: block;
-            padding: 2rem;
-            background: #d4edda;
-            margin: 2rem auto;
-            width: 80%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        #home:target {
-            background-color: #ffeaa7; 
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #333;
-            color: #fff;
-            margin-top: 2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -76,7 +15,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="resume.pdf" download>Download Resume</a></li>
+                <li><a href="files/resiume.pdf" download>Download Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -99,7 +38,20 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <p>No projects to display at the moment. </p>
+        <div class="container">
+            <a href="files/1.docx" class="project-box">დავალება 3</a>
+            <a href="files/2.docx" class="project-box">chat gpt</a>
+            <a href="files/3.docx" class="project-box">popular WP page</a>
+            <a href="files/4.pdf" class="project-box">კორპორაციული კულტურა</a>
+            <a href="files/5.docx" class="project-box">თემები და პლაგინები</a>
+            <a href="files/6.docx" class="project-box">scratch 1</a>
+            <a href="files/7.docx" class="project-box">დავალება 2</a>
+            <a href="files/8.docx" class="project-box">ბაზრის ტრენდები</a>
+            <a href="files/9.docx" class="project-box">Popular WordPress</a>
+            <a href="files/10.docx" class="project-box">localwp</a>
+            <a href="files/11.docx" class="project-box">Linkedln</a>
+            <a href="files/12.docx" class="project-box">my goals</a>
+        </div>
     </section>
 
     <section id="contact">
@@ -118,22 +70,6 @@
         <p>&copy; <?php echo date('Y'); ?> ყველაფერი დაცულია 2025
     </footer>
 </body>
+
+<script src="script.js"></script>:
 </html>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const navItems = document.querySelectorAll('nav ul li a');
-
-        navItems.forEach(item => {
-            
-            const originalText = item.textContent;
-
-            item.addEventListener('mouseover', () => {
-                item.textContent = `→ ${originalText} ←`;
-            });
-
-            item.addEventListener('mouseout', () => {
-                item.textContent = originalText;
-            });
-        });
-    });
-</script>
